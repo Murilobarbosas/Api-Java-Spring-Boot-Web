@@ -2,6 +2,8 @@ package com.framework.fwAPI.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +27,7 @@ public class AndroidController {
 	
 	@SuppressWarnings("unchecked")
 	@PostMapping
-	public List<Pedido> save(Pedido p){
-		return (List<Pedido>) repository.save(p);
+	public Pedido save(@Valid Pedido p){
+		return repository.save(p);
 	}
 }

@@ -1,11 +1,6 @@
 package com.framework.fwAPI.model;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,34 +11,39 @@ public class Pedido {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String nomeProduto;
-	private BigDecimal valorProduto;
 	private String descricao;
+	private String nome_pedido;
+	private String valor_pedido;
+	
 	public Long getId() {
 		return id;
 	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNomeProduto() {
-		return nomeProduto;
-	}
-	public void setNomeProduto(String nomeProduto) {
-		this.nomeProduto = nomeProduto;
-	}
-	public BigDecimal getValorProduto() {
-		return valorProduto;
-	}
-	public void setValorProduto(BigDecimal valorProduto) {
-		this.valorProduto = valorProduto;
-	}
+
 	public String getDescricao() {
 		return descricao;
 	}
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
-	
 
+	public String getNome_pedido() {
+		return nome_pedido;
+	}
+
+	public void setNome_pedido(String nome_pedido) {
+		this.nome_pedido = nome_pedido;
+	}
+
+	public String getValor_pedido() {
+		return valor_pedido;
+	}
+
+	public void setValor_pedido(String valor_pedido) {
+		this.valor_pedido = valor_pedido;
+	}
 }

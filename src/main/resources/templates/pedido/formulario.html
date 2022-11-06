@@ -9,16 +9,16 @@
 			<div class="card mt-3">
 				<form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="POST">
 					<div class="form-group">
-						<label for="nomeProduto">Produto</label>
-						<input th:field="*{nomeProduto}" th:errorClass="is-invalid" class="form-control" placeholder="nome do produto"/>
-						<div class="invalid-feedback" th:errors="*{nomeProduto}">
+						<label for="nome_pedido">Produto</label>
+						<input th:field="*{nome_pedido}" th:errorClass="is-invalid" class="form-control" placeholder="nome do produto"/>
+						<div class="invalid-feedback" th:errors="*{nome_pedido}">
 							Erros no nome do produto
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="valorProduto">Valor do Porduto</label>
-						<input th:field="*{valorProduto}" th:errorClass="is-invalid" class="form-control" placeholder="valor do produto"/>
-						<div class="invalid-feedback" th:errors="*{valorProduto}">
+						<label for="valor_pedido">Valor do Porduto</label>
+						<input th:field="*{valor_pedido}" th:errorClass="is-invalid" class="form-control" placeholder="valor do produto"/>
+						<div class="invalid-feedback" th:errors="*{valor_pedido}">
 							Erros no valor do produto
 						</div>
 					</div>
