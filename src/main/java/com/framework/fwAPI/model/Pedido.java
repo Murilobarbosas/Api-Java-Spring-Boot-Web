@@ -15,6 +15,16 @@ public class Pedido {
 	private String nome_pedido;
 	private String valor_pedido;
 	
+	public Pedido(String descricao, String nome_pedido, String valor_pedido) {
+		this.descricao = descricao;
+		this.nome_pedido = nome_pedido;
+		this.valor_pedido = valor_pedido;
+	}
+
+	public Pedido() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getId() {
 		return id;
 	}

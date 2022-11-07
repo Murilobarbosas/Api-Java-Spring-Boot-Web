@@ -6,6 +6,8 @@ import com.framework.fwAPI.model.Pedido;
 
 public class RequisicaoNovoPedido {
 
+	Pedido pedido = new Pedido();
+	
 	private String descricao;
 	
 	@NotBlank
@@ -40,10 +42,15 @@ public class RequisicaoNovoPedido {
 	}
 
 	public Pedido toPedido() {
-		Pedido pedido = new Pedido();
 		pedido.setDescricao(descricao);
 		pedido.setNome_pedido(nome_pedido);
 		pedido.setValor_pedido(valor_pedido);
 		return pedido;
+	}
+
+	@Override
+	public String toString() {
+		return "RequisicaoNovoPedido [descricao=" + descricao + ", nome_pedido=" + nome_pedido + ", valor_pedido="
+				+ valor_pedido + "]";
 	}
 }
