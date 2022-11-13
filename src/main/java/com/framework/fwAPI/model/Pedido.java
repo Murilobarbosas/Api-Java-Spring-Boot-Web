@@ -5,7 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.NoArgsConstructor;
+
 @Entity
+@NoArgsConstructor
 public class Pedido {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,10 +22,6 @@ public class Pedido {
 		this.descricao = descricao;
 		this.nome_pedido = nome_pedido;
 		this.valor_pedido = valor_pedido;
-	}
-
-	public Pedido() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {
